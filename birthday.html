@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: Arial, sans-serif;
+    }
+
+    .card {
+      background: #fff;
+      padding: 40px;
+      border-radius: 20px;
+      text-align: center;
+      box-shadow: 0 10px 25px rgba(0,0,0,.2);
+      max-width: 400px;
+      transition: all 0.5s ease;
+    }
+
+    h1 {
+      font-size: 48px;
+      color: #ff4081;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 18px;
+      color: #555;
+    }
+
+    .cake {
+      font-size: 60px;
+      margin: 20px 0;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 12px 25px;
+      font-size: 16px;
+      border: none;
+      border-radius: 25px;
+      background: #ff4081;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #e73370;
+    }
+
+    /* Surprise text style */
+    .surprise-text {
+      font-size: 42px;
+      color: #ff4081;
+      animation: fadeIn 1s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.8); }
+      to { opacity: 1; transform: scale(1); }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card" id="card">
+    <h1>Happy Birthday!</h1>
+    <div class="cake">🎂</div>
+    <p>
+      Wishing you a day filled with love, happiness,<br>
+      and lots of sweet surprises!
+    </p>
+
+    <button onclick="showSurprise()">Click here for surprise 🎁</button>
+  </div>
+
+  <script>
+    function showSurprise() {
+      const card = document.getElementById("card");
+
+      // Replace everything inside the card
+      card.innerHTML = `
+        <div class="surprise-text">
+          🎉 Happy Birthday ishh 🎉
+        </div>
+      `;
+    }
+  </script>
+
+</body>
+</html>
